@@ -5,13 +5,24 @@
     <title>Title</title>
 </head>
 <br>
-{% for categ in categorii %}
-    <a href="categorie/?id={{categorie.id}}">{{categ.name}}</a> </br>
-{% endfor %}
-<br />
-{% for product in products %}
-    <a href="produs/?id={{product.id}}">{{product.name}}</a> </br>
-{% endfor %}
+
+
+<table>
+    <tr>
+        <td width="300px" style="border: 0px">
+            {% for categ in categorii %}
+                <a href="categorie/?id={{categorie.id}}">{{categ.name}}</a> <br />
+            {% endfor %}
+        </td>
+
+
+        <td>
+            {% for product in products %}
+                <a href="produs/?id={{product.id}}">{{product.name}}</a> </br>
+            {% endfor %}
+        </td>
+    </tr>
+</table>
 
 </body>
 </html>
