@@ -8,5 +8,10 @@
 Produs name: {{produs.name}} <br />
 Descriere produs: {{produs.description}} <br />
 Pret: {{produs.price}} $ <br />
+
+Categorii: <br />
+{% for c in categorii %}
+    {{c.name}} <br />
+{% endfor %}
 </body>
 </html>

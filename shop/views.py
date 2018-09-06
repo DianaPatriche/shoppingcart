@@ -4,7 +4,8 @@ from .models import Category, Product
 # Create your views here.
 def product_list(request):
     products = Product.objects.all()
-    context = {'products': products }
+    categorii = Category.objects.all()
+    context = {'products': products,'categorii': categorii }
     return render(request, 'list.html', context)
 
 
@@ -14,3 +15,4 @@ def product_detail(request):
     print(produs.id)
     context = {'produs': produs}
     return render(request, 'produs.html', context)
+

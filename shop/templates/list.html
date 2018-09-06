@@ -5,8 +5,13 @@
     <title>Title</title>
 </head>
 <br>
+{% for categ in categorii %}
+    <a href="categorie/?id={{categorie.id}}">{{categ.name}}</a> </br>
+{% endfor %}
+<br />
 {% for product in products %}
     <a href="produs/?id={{product.id}}">{{product.name}}</a> </br>
 {% endfor %}
+
 </body>
 </html>
