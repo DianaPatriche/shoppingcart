@@ -9,8 +9,8 @@ def product_list(request):
     return render(request, 'list.html', context)
 
 
-def product_detail(request):
-    id = request.GET.get('id')
+def product_detail(request, productid):
+    id = productid
     produs = Product.objects.get(pk=int(id))
     print(produs.id)
     context = {'produs': produs}
